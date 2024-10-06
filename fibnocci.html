@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fibnocci</title>
+</head>
+<body>
+    <input type="number" id="limit">
+    <button onclick=loadfib()>Get series</button>
+    <p id="result"></p>
+    <script>
+        function loadfib(){
+        let limiNum = document.getElementById('limit').value
+        // fibNoci(limiNum)
+        // function fibNoci(n){
+        var n = limiNum
+            let a = 0
+            let b = 1  
+            let series = '' 
+            for (let k=0; k<n;k++)
+            {
+            console.log(a)
+            series += a + ' ';     
+            let temp = a
+            a=b
+            b=a+temp
+            };
+        document.getElementById('result').innerHTML = series.trim()
+    };
+    
+        
+    </script>
+</body>
+</html>
